@@ -2,3 +2,51 @@
   margin: 0;
   padding: 0;
 }
+
+.list {
+  list-style-type: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.grid-item {
+  padding: 18px;
+  border: 1px solid #23daf2;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.comment-btn {
+  padding: 8px;
+  background-color: #08838b;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.comment-btn:hover {
+  background-color: #0da4af;
+  color: #fff;
+}
+
+.action-btns a {
+  text-decoration: none;
+}

@@ -4,11 +4,62 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Football leagues</title>
+  <title>Football Leagues</title>
 </head>
 <body>
   <header>
     <h1>Football Leagues</h1>
   </header>
+  <main>
+    <section>
+      <ul class="grid-4 list"></ul>
+      <div class="modal-header">
+        <span class="close">&times;</span>
+       </div>
+       <div class="modal-body">
+        <div class="project-image">
+          <img class="featured-image" src=${proj.featuredImage} alt="project-image" />
+        </div>
+        <div class="project-title">
+          <h2>${proj.title}</h2>
+          <ul class="view-btn view-1">
+            <li>
+              <a class="see-live" href=${proj.sourceURL}>See Live
+              <img src="./assets/icons/see-icon.svg" alt="explore">
+              </a>
+            </li>
+            <li>
+              <a class="see-progress" href=${proj.versionURL}>See Progress
+                <img src="./assets/icons/github-white.svg" alt="github">
+              </a>
+              
+            </li>
+          </ul>
+        </div>
+        <ul class="frameworks">
+        <li>${proj.teachnologies[0]}</li>
+        <li>${proj.teachnologies[1]}</li>
+        <li>${proj.teachnologies[2]}</li>
+        <li>${proj.teachnologies[3]}</li>
+        </ul>
+        <div class="project-description">
+          <p>${proj.description}</p>
+        </div>
+       </div>
+       <ul class="view-btn view-2">
+       <li>
+         <a class="see-live" href=${proj.sourceURL}>See Live
+         <img src="./assets/icons/see-icon.svg" alt="explore">
+         </a>
+       </li>
+       <li>
+         <a class="see-progress" href=${proj.versionURL}>See Progress
+           <img src="./assets/icons/github-white.svg" alt="github">
+         </a>
+         
+       </li>
+     </ul>
+    </section>
+  </main>
 </body>
 </html>
