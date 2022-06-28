@@ -3,6 +3,21 @@
   padding: 0;
 }
 
+header {
+  display: flex;
+  justify-content: space-around;
+  margin: 24px 0;
+}
+
+.company-logo {
+  text-decoration: none;
+  color: #ec7709;
+  padding: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(219, 219, 231) 0%, rgb(5, 202, 228) 100%);
+  border: 5px solid #ec7709;
+}
+
 .list {
   list-style-type: none;
   width: 90%;

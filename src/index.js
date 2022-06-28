@@ -5,4 +5,5 @@ window.addEventListener('DOMContentLoaded', async (event) => {
   event.preventDefault();
   const data = await leagues();
   displayLeagues(data);
+  document.querySelector('.count').innerHTML = data.length;
 });
