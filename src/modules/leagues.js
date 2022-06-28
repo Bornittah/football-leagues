@@ -2,10 +2,10 @@ export const API = 'https://api-football-standings.azharimm.site/leagues';
 
 export const leagues = async () => {
   const response = await fetch(`${API}`,
-    { 
+    {
       method: 'GET',
-      headers: {'Content-Type': 'application/json'},
-     });
+      headers: { 'Content-Type': 'application/json' },
+    });
 
   const promise = await response.json().then((data) => data.data).catch((err) => err);
   return promise;
