@@ -5,5 +5,4 @@ window.addEventListener('DOMContentLoaded', async (event) => {
   event.preventDefault();
   const data = await leagues();
   displayLeagues(data);
-  console.log(data)
 });
