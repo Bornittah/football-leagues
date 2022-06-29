@@ -5,13 +5,14 @@ This is the JavaScript capstone project at Microverse. The aim of this project i
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Major languages: HTML, CSS, Es6 Javascript
+- Frameworks:
+- Technologies used: Web technologies
+- Tools: Webpack, Jest library, Babel, External API
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+Click [here](https://bornittah.github.io/football-leagues/) to check out the live demo
 
 
 ## Getting Started
@@ -31,24 +32,19 @@ To get a local copy up and running follow these simple example steps.
 ### Usage
 
 ### Run tests
-
+Run "npm test"
 ### Deployment
-
-
+The app is deployed on the github pages
+Run "npm run deploy" on your terminal
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Bornittah)
+- Twitter: [@twitterhandle](https://twitter.com/AgashaBornittah)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/agasha-bornittah)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
