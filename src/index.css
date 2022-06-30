@@ -8,7 +8,7 @@
 }
 
 .space-btn {
-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .flex-col {
@@ -90,7 +90,9 @@ header {
   width: 50%;
 }
 
-.form input, textarea, button {
+.form input,
+textarea,
+button {
   padding: 6px;
   margin: 4px;
   outline: none;
@@ -118,7 +120,7 @@ header {
   border: 1px solid #ebecf0;
   border-radius: 8px;
   transform: translate(-50%), -50%;
-  width:50%;
+  width: 50%;
   margin: auto;
   overflow-y: scroll;
   display: none;

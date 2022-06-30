@@ -12,12 +12,11 @@ export const appId = async () => {
   const id = await response.text();
   const key = localStorage.getItem('football');
   if (key === null) {
-    localStorage.setItem('football', data);
+    localStorage.setItem('football', id);
     const newKey = localStorage.getItem('football');
     return newKey;
   }
   return key;
-
 };
 
 export const addComments = async (id, data) => {
@@ -34,8 +33,8 @@ export const addComments = async (id, data) => {
   return user;
 };
 
-export const fetchComments = async (id, item_id) => {
-  const response = await fetch(`${INVOLVEMENT_API}/apps/${id}/comments/?item_id=${item_id}`,
+export const fetchComments = async (id, itemId) => {
+  const response = await fetch(`${INVOLVEMENT_API}/apps/${id}/comments/?item_id=${itemId}`,
     {
       method: 'GET',
       headers: {
@@ -62,13 +61,13 @@ export const displayComments = (list) => {
   }
 };
 
-export const showCommentsToUI = async (comments, item_id) => {
+export const showCommentsToUI = async (comments, itemId) => {
   const key = localStorage.getItem('football');
   if (key === null) {
     displayComments(comments);
     document.querySelector('.comments_count').textContent = comments.length;
   } else {
-    comments = await fetchComments(key, item_id);
+    comments = await fetchComments(key, itemId);
     displayComments(comments);
     document.querySelector('.comments_count').textContent = comments.length;
   }
@@ -100,20 +99,20 @@ export const fetchLikes = async (id) => {
   return likes;
 };
 
-export const displayLikes = async (items, item_id) => {
-  const new_item_id = item_id.replace('.', '');
+export const displayLikes = async (items, itemId) => {
+  const newId = itemId.replace('.', '');
   const key = localStorage.getItem('football');
   if (key === null) {
-    document.querySelector(`#likes-counter-${new_item_id}`).textContent = `${0} likes`;
+    document.querySelector(`#likes-counter-${newId}`).textContent = `${0} likes`;
   } else {
-   items = await fetchLikes(key, item_id);
+    items = await fetchLikes(key, itemId);
     items.forEach((like) => {
       const count = like.likes;
-      if (like.item_id === item_id) {
-        if (count === 1){
-          document.querySelector(`#likes-counter-${new_item_id}`).textContent = `${count} like`;
+      if (like.itemId === itemId) {
+        if (count === 1) {
+          document.querySelector(`#likes-counter-${newId}`).textContent = `${count} like`;
         } else {
-          document.querySelector(`#likes-counter-${new_item_id}`).textContent = `${count} likes`;
+          document.querySelector(`#likes-counter-${newId}`).textContent = `${count} likes`;
         }
       }
     });

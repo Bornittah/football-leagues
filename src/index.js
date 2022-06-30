@@ -10,4 +10,3 @@ window.addEventListener('DOMContentLoaded', async (event) => {
   document.querySelector('.count').innerHTML = data.length;
   await appId();
 });
-

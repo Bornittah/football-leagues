@@ -1,4 +1,5 @@
 import { addComments, showCommentsToUI, addLikes, displayLikes } from './user-interactions.js';
+
 export const API = 'https://api-football-standings.azharimm.site/leagues';
 
 export const leagues = async () => {
@@ -59,13 +60,13 @@ export const displayLeagues = (list) => {
     });
     document.querySelector('.list').innerHTML = str;
 
-    const modal=document.querySelector('.modal');
+    const modal = document.querySelector('.modal');
     document.querySelectorAll('.comment-btn').forEach((button, index)=>{
-      button.addEventListener('click', async (e)=>{
+      button.addEventListener('click', async (e) => {
         e.preventDefault();
         document.querySelector('.modal-overlay').classList.add('active');
         modal.style.display = 'flex';
-        let item = list[index];
+        const item = list[index];
         const season = await seasons(item.id);
         const standing = await standings(item.id);
         const div = `<div class="modal-header">
@@ -104,40 +105,39 @@ export const displayLeagues = (list) => {
          </form>
         </div>
       </div>`;
-      modal.innerHTML = div;
+        modal.innerHTML = div;
       
-      document.querySelector('.close').addEventListener('click', ()=>{
-        document.querySelector('.modal-overlay').classList.remove('active');
-        modal.style.display = 'none';
-      }); 
+        document.querySelector('.close').addEventListener('click', () => {
+          document.querySelector('.modal-overlay').classList.remove('active');
+          modal.style.display = 'none';
+        }); 
 
-      const username = document.querySelector('.username');
-      const message = document.querySelector('.insights');
+        const username = document.querySelector('.username');
+        const message = document.querySelector('.insights');
 
-      document.querySelectorAll('.submit-comment').forEach((button)=>{
-        button.addEventListener('click', async (e)=>{
-          e.preventDefault();
-          const comment = {
-            "item_id": item.id,
-            "username": username.value,
-            "comment": message.value,
-          };
-
-          await addComments(appId, comment);
-          await showCommentsToUI(appId, item.id);
-          username.value = '';
-          message.value = '';
+        document.querySelectorAll('.submit-comment').forEach((button) => {
+          button.addEventListener('click', async (e) => {
+              e.preventDefault();
+              const comment = {
+                'item_id': item.id,
+                'username': username.value,
+                'comment': message.value,
+              };
+              await addComments(appId, comment);
+              await showCommentsToUI(appId, item.id);
+              username.value = '';
+              message.value = '';
+            });
+          });
         });
-      });
-      });
     });
 
     document.querySelectorAll('.like-btn').forEach((button, index)=>{
-      button.addEventListener('click', async (e)=>{
-        let item = list[index];
+      button.addEventListener('click', async (e) =>{ 
+        const item = list[index];
         e.preventDefault();
         const like = {
-          "item_id": item.id,
+          'item_id': item.id,
         };
         await addLikes(appId, like);
         await displayLikes(item, item.id);
