@@ -73,7 +73,7 @@ export const displayLeagues = (list) => {
         <span class="close flex">&times;</span>
        </div>
        <div class="modal-body">
-        <img src="${item.logos.light}" alt="logo">
+        <img src="${item.logos.light}" class="modal-image" alt="logo">
         <div class="m-12-h-2">
           <h2>${item.name}</h2>
           <p><b>Slug:</b> ${item.slug}</p>
@@ -90,13 +90,7 @@ export const displayLeagues = (list) => {
         </div>
        </div>
         <h2>Comments(<span class="comments_count"></span>)</h2>
-        <ul class="comments">
-         <li class="flex">
-           <date>21/06/2022</date>
-           <p><b>Alex:</b></p>
-           <p>It was agreat season</p>
-         </li>
-        </ul>
+        <ul class="comments"></ul>
         <div class="form-section">
          <form class="flex flex-col form">
            <input type="text" class="username" placeholder="Your name">

@@ -108,7 +108,7 @@ export const displayLikes = async (items, itemId) => {
     items = await fetchLikes(key, itemId);
     items.forEach((like) => {
       const count = like.likes;
-      if (like.itemId === itemId) {
+      if (like.item_id === itemId) {
         if (count === 1) {
           document.querySelector(`#likes-counter-${newId}`).textContent = `${count} like`;
         } else {
