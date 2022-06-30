@@ -1,5 +1,5 @@
 import {
-  addComments, showCommentsToUI, addLikes, displayLikes
+  addComments, showCommentsToUI, addLikes, displayLikes,
 } from './user-interactions.js';
 
 export const API = 'https://api-football-standings.azharimm.site/leagues';

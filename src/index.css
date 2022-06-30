@@ -102,10 +102,6 @@ button {
   margin: 12px 0;
 }
 
-.comments p {
-  margin: 5px;
-}
-
 .modal {
   position: absolute;
   top: 5%;
@@ -181,6 +177,10 @@ footer {
 
 footer p {
   padding: 12px;
+}
+
+.comments p {
+  margin: 5px;
 }
 
 @media screen and (max-width: 768px) {
