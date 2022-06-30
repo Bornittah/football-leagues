@@ -22,8 +22,8 @@ describe('Tests', () => {
 
   test('Number of Comments', () => {
     const ul = document.querySelectorAll('.comments');
-    ul.innerHTML = `<li>2022/06/29 Aga: good game</li>`;
-    let counter = document.querySelectorAll('.comments_count');
+    ul.innerHTML = '<li>2022/06/29 Aga: good game</li>';
+    const counter = document.querySelectorAll('.comments_count');
     const comments = ul.childElementCount;
     expect(counter.textContext).toBe(comments);
   });

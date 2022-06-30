@@ -1,4 +1,6 @@
-import { addComments, showCommentsToUI, addLikes, displayLikes } from './user-interactions.js';
+import {
+  addComments, showCommentsToUI, addLikes, displayLikes
+} from './user-interactions.js';
 
 export const API = 'https://api-football-standings.azharimm.site/leagues';
 
@@ -103,8 +105,8 @@ export const displayLeagues = (list) => {
         document.querySelector('.close').addEventListener('click', () => {
           document.querySelector('.modal-overlay').classList.remove('active');
           modal.style.display = 'none';
-        }); 
-        
+        });
+
         const username = document.querySelector('.username');
         const message = document.querySelector('.insights');
         document.querySelectorAll('.submit-comment').forEach((button) => {
@@ -112,8 +114,8 @@ export const displayLeagues = (list) => {
             e.preventDefault();
             const comment = {
               item_id: item.id,
-              'username': username.value,
-              'comment': message.value,
+              username: username.value,
+              comment: message.value,
             };
             await addComments(appId, comment);
             await showCommentsToUI(appId, item.id);
@@ -125,7 +127,7 @@ export const displayLeagues = (list) => {
     });
 
     document.querySelectorAll('.like-btn').forEach((button, index) => {
-      button.addEventListener('click', async (e) => { 
+      button.addEventListener('click', async (e) => {
         const item = list[index];
         e.preventDefault();
         const like = {
