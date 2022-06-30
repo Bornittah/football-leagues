@@ -8,7 +8,7 @@ This is the JavaScript capstone project at Microverse. The aim of this project i
 - Major languages: HTML, CSS, Es6 Javascript
 - Frameworks:
 - Technologies used: Web technologies
-- Tools: Webpack, Jest library, Babel, External API
+- Tools: Webpack, Jest library, Babel, [External API](https://github.com/azharimm/football-standings-api)
 
 ## Live Demo (if available)
 
