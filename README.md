@@ -17,20 +17,23 @@ Click [here](https://bornittah.github.io/football-leagues/) to check out the liv
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+One should have knowledge about the following
+
+HTML, CSS, Javascript, webpack and npm
 
 ### Setup
-
+Navigate to the local folder and clone the repository from the github
+Run "git clone [url](https://github.com/Bornittah/football-leagues.git"
+Navigate to the cloned project
 ### Install
-
+Navigate to the project
+Run "npm install" to install all the required dependences
 ### Usage
-
+Navigate to the project
+Run "npm start" to serve the project
 ### Run tests
 Run "npm test"
 ### Deployment
@@ -50,7 +53,7 @@ Run "npm run deploy" on your terminal
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Bornittah/football-leagues/issues).
 
 ## Show your support
 
@@ -60,7 +63,6 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
 
 ## 📝 License
 
