@@ -87,7 +87,7 @@ header {
 }
 
 .form {
-  width: 50%;
+  width: 100%;
 }
 
 .form input,
@@ -108,10 +108,10 @@ button {
 
 .modal {
   position: absolute;
-  top: 0;
+  top: 5%;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 5%;
   flex-direction: column;
   box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
   padding: 24px;
@@ -120,7 +120,7 @@ button {
   border: 1px solid #ebecf0;
   border-radius: 8px;
   transform: translate(-50%), -50%;
-  width: 50%;
+  width: 30%;
   margin: auto;
   overflow-y: scroll;
   display: none;
@@ -159,7 +159,7 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #c1c7d0;
+  background: #68686988;
   opacity: 0;
   pointer-events: none;
   z-index: 5;
@@ -168,6 +168,19 @@ button {
 .modal-overlay.active {
   pointer-events: all;
   opacity: 1;
+}
+
+.modal-image {
+  height: 250px;
+}
+
+footer {
+  border-top: 1px solid #08838b;
+  margin-top: 24px;
+}
+
+footer p {
+  padding: 12px;
 }
 
 @media screen and (max-width: 768px) {
