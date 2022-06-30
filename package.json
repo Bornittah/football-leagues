@@ -4,7 +4,7 @@
   "description": "This is the JavaScript capstone project at Microverse. The aim of this project is to build a web application based on an external API",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --watch",
     "build": "webpack",
     "watch": "webpack --coverage",
     "start": "webpack serve --open",
