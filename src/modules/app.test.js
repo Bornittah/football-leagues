@@ -44,7 +44,7 @@ describe('Tests', () => {
       username: 'Agasha',
       comment: 'Nice game!',
     };
-    const { item_id, username, message } = comment;
+    
     await addComments(key, comment);
     const comments = await fetchComments(key, id);
     const commentCounter = await countComments(id);
@@ -59,7 +59,6 @@ describe('Tests', () => {
     const like = {
       item_id: id,
     };
-    const { item_id } = like;
     await addLikes(key, like);
     const likes = await fetchLikes(key, id);
     expect(likes.length).toBe(1);
