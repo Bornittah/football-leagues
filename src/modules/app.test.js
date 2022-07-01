@@ -38,13 +38,13 @@ describe('Tests', () => {
     await appId();
     const key = localStorage.getItem('football');
     const data = await leagues();
-    const id = data[0].id;
+    const { id } = data[0];
     const comment = {
       item_id: id,
       username: 'Agasha',
       comment: 'Nice game!',
     };
-    
+
     await addComments(key, comment);
     const comments = await fetchComments(key, id);
     const commentCounter = await countComments(id);
@@ -55,7 +55,7 @@ describe('Tests', () => {
     await appId();
     const key = localStorage.getItem('football');
     const data = await leagues();
-    const id = data[0].id;
+    const { id } = data[0];
     const like = {
       item_id: id,
     };
