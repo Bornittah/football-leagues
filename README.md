@@ -8,7 +8,7 @@ This is the JavaScript capstone project at Microverse. The aim of this project i
 - Major languages: HTML, CSS, Es6 Javascript
 - Frameworks:
 - Technologies used: Web technologies
-- Tools: Webpack, Jest library, Babel, [External API](https://github.com/azharimm/football-standings-api)
+- Tools: Webpack, Jest library, Babel, [External API](https://github.com/azharimm/football-standings-api),[Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
 
 ## Live Demo (if available)
 
@@ -28,7 +28,7 @@ HTML, CSS, Javascript, webpack and npm
 
 ### Setup
 Navigate to the local folder and clone the repository from the github
-Run "git clone [url](https://github.com/Bornittah/football-leagues.git"
+Run "git clone [url](https://github.com/Bornittah/football-leagues.git)"
 Navigate to the cloned project
 ### Install
 Navigate to the project
