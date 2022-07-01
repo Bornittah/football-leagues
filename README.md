@@ -13,6 +13,7 @@ This is the JavaScript capstone project at Microverse. The aim of this project i
 ## Live Demo (if available)
 
 Click [here](https://bornittah.github.io/football-leagues/) to check out the live demo
+Check out the presentation [video](https://www.loom.com/share/4f7e99c645ae45fcbe307b00140422d2)
 
 
 ## Getting Started
