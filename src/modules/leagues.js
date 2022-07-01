@@ -40,7 +40,7 @@ export const standings = async (id) => {
 export const countLeagues = async () => {
   const data = await leagues();
   return data.length;
-}
+};
 
 export const displayLeagues = (list) => {
   const appId = localStorage.getItem('football');

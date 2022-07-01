@@ -65,7 +65,7 @@ export const countComments = async (id) => {
   const key = localStorage.getItem('football');
   const comments = await fetchComments(key, id);
   return comments.length;
-}
+};
 
 export const showCommentsToUI = async (comments, itemId) => {
   const key = localStorage.getItem('football');
