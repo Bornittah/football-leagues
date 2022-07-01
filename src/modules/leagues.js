@@ -66,9 +66,9 @@ export const displayLeagues = (list) => {
     document.querySelectorAll('.comment-btn').forEach((button, index) => {
       button.addEventListener('click', async (e) => {
         e.preventDefault();
+        const item = list[index];
         document.querySelector('.modal-overlay').classList.add('active');
         modal.style.display = 'flex';
-        const item = list[index];
         const season = await seasons(item.id);
         const standing = await standings(item.id);
         const div = `<div class="modal-header">
@@ -123,6 +123,7 @@ export const displayLeagues = (list) => {
             message.value = '';
           });
         });
+        showCommentsToUI(appId, item.id);
       });
     });
 
