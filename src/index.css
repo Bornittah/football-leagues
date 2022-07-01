@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-btn {
+  justify-content: space-between;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+header {
+  justify-content: space-around;
+  margin: 24px 0;
+}
+
+.company-logo {
+  text-decoration: none;
+  color: #ec7709;
+  padding: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(219, 219, 231) 0%, rgb(5, 202, 228) 100%);
+  border: 5px solid #ec7709;
+}
+
+.list {
+  list-style-type: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.grid-item {
+  padding: 18px;
+  border: 1px solid #23daf2;
+}
+
+.action-btns {
+  margin: 12px 0;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.comment-btn {
+  padding: 8px;
+  background-color: #08838b;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.comment-btn:hover {
+  background-color: #0da4af;
+  color: #fff;
+}
+
+.action-btns a {
+  text-decoration: none;
+}
+
+/* modal */
+.m-12-h-2 {
+  margin: 12px 0;
+  line-height: 2;
+}
+
+.form-section {
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+}
+
+.form input,
+textarea,
+button {
+  padding: 6px;
+  margin: 4px;
+  outline: none;
+}
+
+.comments {
+  margin: 12px 0;
+}
+
+.modal {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  flex-direction: column;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  padding: 24px;
+  background: #fff;
+  transition: all 0.5ms ease-in-out;
+  border: 1px solid #ebecf0;
+  border-radius: 8px;
+  transform: translate(-50%), -50%;
+  width: 30%;
+  margin: auto;
+  overflow-y: scroll;
+  display: none;
+  flex-wrap: nowrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.modal.active {
+  transform: translate(5%, 0) scale(1);
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.modal-header {
+  margin: 14px 0;
+}
+
+.close {
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 3rem;
+  font-weight: 700;
+  float: right;
+  right: 24px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #68686988;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.modal-overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.modal-image {
+  height: 250px;
+}
+
+footer {
+  border-top: 1px solid #08838b;
+  margin-top: 24px;
+}
+
+footer p {
+  padding: 12px;
+}
+
+.comments p {
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .grid-item {
+    padding: 12px;
+  }
+
+  .modal {
+    width: 80%;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
