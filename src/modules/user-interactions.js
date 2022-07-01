@@ -61,15 +61,19 @@ export const displayComments = (list) => {
   }
 };
 
+export const countComments = async (id) => {
+  const key = localStorage.getItem('football');
+  const comments = await fetchComments(key, id);
+  return comments.length;
+}
+
 export const showCommentsToUI = async (comments, itemId) => {
   const key = localStorage.getItem('football');
   if (key === null) {
     displayComments(comments);
-    document.querySelector('.comments_count').textContent = comments.length;
   } else {
     comments = await fetchComments(key, itemId);
     displayComments(comments);
-    document.querySelector('.comments_count').textContent = comments.length;
   }
 };
 

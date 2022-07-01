@@ -1,5 +1,5 @@
 import {
-  addComments, showCommentsToUI, addLikes, displayLikes,
+  addComments, showCommentsToUI, addLikes, displayLikes, countComments,
 } from './user-interactions.js';
 
 export const API = 'https://api-football-standings.azharimm.site/leagues';
@@ -37,6 +37,11 @@ export const standings = async (id) => {
   return promise;
 };
 
+export const countLeagues = async () => {
+  const data = await leagues();
+  return data.length;
+}
+
 export const displayLeagues = (list) => {
   const appId = localStorage.getItem('football');
   let str = '';
@@ -71,6 +76,7 @@ export const displayLeagues = (list) => {
         modal.style.display = 'flex';
         const season = await seasons(item.id);
         const standing = await standings(item.id);
+        const commentCounter = await countComments(item.id);
         const div = `<div class="modal-header">
         <span class="close flex">&times;</span>
        </div>
@@ -121,9 +127,11 @@ export const displayLeagues = (list) => {
             await showCommentsToUI(appId, item.id);
             username.value = '';
             message.value = '';
+            document.querySelector('.comments_count').textContent = commentCounter;
           });
         });
         showCommentsToUI(appId, item.id);
+        document.querySelector('.comments_count').textContent = commentCounter;
       });
     });
 
